@@ -7,89 +7,71 @@ const StyledFooter = styled.footer`
   padding: 2rem 0;
 `;
 
+const FooterLogo = styled.img`
+  height: 40px;
+  margin-right: 20px;
+`;
+
 const FooterContainer = styled.div`
-  display: flex;
-  flex: 2 1 auto;
-  flex-wrap: wrap;
-  max-width: 1200px;
+  max-width: 1264px;
+  width: 100%;
   margin: 0 auto;
-  `;
+  display: flex;
+  flex-flow: row wrap;
+`;
 
 const FooterNav = styled.nav`
   display: flex;
   flex: 2 1 auto;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: top;
-  max-width: 1200px;
-  margin: 0 auto;
-`;
-
-const FooterLogo = styled.img`
-  height: 30px;
+  margin: 10px auto;
 `;
 
 const FooterCol = styled.nav`
   flex: 1 0 auto;
-  max-width: 1200px;
-  margin: 0 auto;
   padding: 0;
 `;
 
 const FooterHeader = styled.div`
   text-transform: uppercase;
   font-weight: bold;
-  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
   color: white;
-  font-size: 100%;
-`;
-
- const FooterList = styled.li`
-  list-style-type: none;
-  display: flex;
-  flex-direction: column;
-  max-width: 1200px;
-  margin: 0 auto;
-  margin-top: 20px;
-  padding: 0 20px;
+  font-size: 13px;
 `;
 
 const FooterContent = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 1200px;
   margin: 0 auto;
+  margin-top: 5px;
+  font-size: 11px;
+`;
+
+const FooterAPI = styled.div`
   margin-top: 20px;
-  padding: 0 20px;
 `;
 
 const FooterCopyright = styled.div`
   display: flex;
   flex-direction: column;
+  font-size: 11px;
   justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+  margin-top: -10px;
 `;
 
 const FooterCopyrighterList = styled.li`
   list-style-type: none;
   display: flex;
   gap: 10px;
-  max-width: 1200px;
   margin-top: 20px;
   margin: 0 20 auto;
-  padding: 0 20px;
 `;
 
 const FooterCopyrighterP = styled.p`
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
   text-decoration: none;
 `;
 
@@ -133,64 +115,12 @@ const FooterNavi = ({
         <FooterContent href ={href4_4}>{content4_4}</FooterContent>
         <FooterContent href ={href4_5}>{content4_5}</FooterContent>
         <FooterContent href ={href4_6}>{content4_6}</FooterContent>
-        <FooterContent href ={href4_7}>{content4_7}</FooterContent>
+        <FooterContent href ={href4_7}><FooterAPI>{content4_7}</FooterAPI></FooterContent>
         <FooterContent href ={href4_8}>{content4_8}</FooterContent>
       </FooterCol>
     </FooterNav>
   )
 }
-// const FooterNavi = () => {
-//   return (
-//     <FooterNav>
-//       <FooterCol>
-//         <FooterHeader>STACK OVERFLOW</FooterHeader>
-//         <FooterList>
-//           <li>Questions</li>
-//           <li>Help</li>
-//         </FooterList>
-//       </FooterCol>
-//       <FooterCol>
-//         <FooterHeader>PRODUCTS</FooterHeader>
-//         <FooterList>
-//           <li>Teams</li>
-//           <li>Advertising</li>
-//           <li>Collectives</li>
-//           <li>Talent</li>
-//         </FooterList>
-//       </FooterCol>
-//       <FooterCol>
-//         <FooterHeader>COMPANY</FooterHeader>
-//         <FooterList>
-//           <li>About</li>
-//           <li>Press</li>
-//           <li>Work Here</li>
-//           <li>Legal</li>
-//           <li>Privacy Policy</li>
-//           <li>Terms of Service</li>
-//           <li>Contact Us</li>
-//           <li>Cookie Settings</li>
-//           <li>Cookie Policy</li>
-//         </FooterList>
-//       </FooterCol>
-//       <FooterCol>
-//         <FooterHeader>
-//         STACK EXCHANGE NETWORK
-//           {/* <a href="https://stackexchange.com" data-gps-track="footer.click({ location: 1, link: 30 })">STACK EXCHANGE NETWORK</a> */}
-//         </FooterHeader>
-//         <FooterList>
-//           <li>Technology</li>
-//           <li>Culture & recreation</li>
-//           <li>Life & arts</li>
-//           <li>Science</li>
-//           <li>Professional</li>
-//           <li>Business</li>
-//           <li>API</li>
-//           <li>Data</li>
-//         </FooterList>
-//       </FooterCol>
-//     </FooterNav>
-//   )
-// }
 
 const FooterCopyrighter = () => {
   return (
@@ -203,11 +133,19 @@ const FooterCopyrighter = () => {
         <li>Instagram</li>
       </FooterCopyrighterList>
       <FooterCopyrighterP>
-        <p>
+        {/* <p>
           Site design / logo © 2023 Stack Exchange Inc; user contributions licensed under 
           <a href="https://stackoverflow.com/help/licensing"> CC BY-SA</a>
           <span id="svnrev">rev&nbsp;2023.8.9.43572</span>
-        </p>
+        </p> */}
+        <div>
+          Site design / logo © 2023 Stack Exchange Inc; 
+        </div>
+        <div>
+          user contributions licensed under 
+          <a href="https://stackoverflow.com/help/licensing"> CC BY-SA</a>
+          <span id="svnrev">rev&nbsp;2023.8.9.43572</span>
+        </div>
       </FooterCopyrighterP>
     </FooterCopyright>
   )
