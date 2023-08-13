@@ -1,23 +1,26 @@
 import React from 'react';
 import styled from 'styled-components';
 
+// CSS 코드입니다.
+
 const StyledFooter = styled.footer`
   background-color: #222;
   color: #999;
   padding: 2rem 0;
 `;
 
-const FooterLogo = styled.img`
-  height: 40px;
-  margin-right: 20px;
-`;
 
 const FooterContainer = styled.div`
   max-width: 1264px;
   width: 100%;
-  margin: 0 auto;
   display: flex;
   flex-flow: row wrap;
+  gap: 0px;
+  `;
+
+const FooterLogo = styled.img`
+  height: 40px;
+  margin-right: 20px;
 `;
 
 const FooterNav = styled.nav`
@@ -74,6 +77,10 @@ const FooterCopyrighterP = styled.p`
   margin: 0 auto;
   text-decoration: none;
 `;
+
+
+
+// js 부분입니다. 
 
 const FooterNavi = ({
   title1,href1_1,content1_1,href1_2,content1_2,
@@ -133,11 +140,6 @@ const FooterCopyrighter = () => {
         <li>Instagram</li>
       </FooterCopyrighterList>
       <FooterCopyrighterP>
-        {/* <p>
-          Site design / logo © 2023 Stack Exchange Inc; user contributions licensed under 
-          <a href="https://stackoverflow.com/help/licensing"> CC BY-SA</a>
-          <span id="svnrev">rev&nbsp;2023.8.9.43572</span>
-        </p> */}
         <div>
           Site design / logo © 2023 Stack Exchange Inc; 
         </div>
